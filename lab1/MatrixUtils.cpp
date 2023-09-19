@@ -1,4 +1,7 @@
 #include <iostream>
+
+#define EIGEN_DONT_VECTORIZE
+
 #include "MatrixUtils.h"
 
 using namespace std;
@@ -45,6 +48,17 @@ void multiplyMatrices(int N, Eigen::MatrixXd A, Eigen::MatrixXd B, Eigen::Matrix
 }
 
 void multiplyMatricesOptimized(int N, double** A, double** B, double** C){
+    for (int i=0; i<N; i++){
+        for (int k=0; k<N; k++){        // We set k on the inner loop to improve cache performance
+            for (int j=0; j<N; j++){
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+}
+
+void multiplyMatricesOptimizedParallelized(int N, double** A, double** B, double** C){
+    #pragma omp parallel for private(i,j,k) shared(A,B,C)   // this pragma will parallelize the outer loop
     for (int i=0; i<N; i++){
         for (int k=0; k<N; k++){        // We set k on the inner loop to improve cache performance
             for (int j=0; j<N; j++){
