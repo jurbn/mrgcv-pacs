@@ -1,7 +1,5 @@
 #include <iostream>
 
-#define EIGEN_DONT_VECTORIZE
-
 #include "MatrixUtils.h"
 
 using namespace std;
