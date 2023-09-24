@@ -1,5 +1,3 @@
-#define EIGEN_DONT_VECTORIZE
-
 #include <iostream>
 #include <fstream>
 #include <chrono>

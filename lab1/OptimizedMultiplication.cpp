@@ -52,7 +52,7 @@ void generateAndMultiplicateOptimized(int N){
 }
 
 int main() {
-    cout << "Vectorized Matrix Multiplication benchmark in progress..." << endl;
+    cout << "Optimized Matrix Multiplication benchmark in progress..." << endl;
     BenchmarkFile << "Size,Optimized" << endl;
     for (int N=1; N < 10; N++)
         generateAndMultiplicateOptimized(N);
