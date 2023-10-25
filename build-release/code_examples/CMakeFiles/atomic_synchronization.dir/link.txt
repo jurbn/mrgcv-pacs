@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/atomic_synchronization.dir/atomic_synchronization.cc.o -o atomic_synchronization 

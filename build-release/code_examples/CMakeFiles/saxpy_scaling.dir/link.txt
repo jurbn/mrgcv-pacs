@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/saxpy_scaling.dir/saxpy_scaling.cc.o -o saxpy_scaling 

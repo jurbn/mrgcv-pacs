@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/pi_taylor_sequential.dir/pi_taylor_sequential.cc.o -o pi_taylor_sequential 

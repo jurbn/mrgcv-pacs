@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/pi_taylor_sequential_inefficient.dir/pi_taylor_sequential_inefficient.cc.o -o pi_taylor_sequential_inefficient 

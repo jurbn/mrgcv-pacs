@@ -13,6 +13,9 @@ int main(int argc, char *argv[])
     gettimeofday(&start, NULL);
 
     int N = std::atoi(argv[1]);
+
+    cout << "N: " << N << endl;
+    
     int i, j, k;
 
     // Memory allocation

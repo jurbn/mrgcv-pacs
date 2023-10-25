@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/pi_taylor_parallel.dir/pi_taylor_parallel.cc.o -o pi_taylor_parallel 

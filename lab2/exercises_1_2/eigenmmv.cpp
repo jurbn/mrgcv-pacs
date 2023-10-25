@@ -16,6 +16,8 @@ int main(int argc, char *argv[])
 
     int N = std::atoi(argv[1]);
 
+    cout << "N: " << N << endl;
+
     int i, j, k;
 
     MatrixXd a = MatrixXd::Random(N,N);

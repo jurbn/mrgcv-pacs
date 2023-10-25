@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/hello_pacs.dir/hello_pacs.cc.o -o hello_pacs 
