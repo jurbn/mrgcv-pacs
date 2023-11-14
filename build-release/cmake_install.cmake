@@ -46,6 +46,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/jorge/mrgcv/pacs/build-release/code_examples/cmake_install.cmake")
   include("/home/jorge/mrgcv/pacs/build-release/lab3/cmake_install.cmake")
+  include("/home/jorge/mrgcv/pacs/build-release/lab4/cmake_install.cmake")
 
 endif()
 

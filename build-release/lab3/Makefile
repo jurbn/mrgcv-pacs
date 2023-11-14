@@ -172,6 +172,20 @@ pi_taylor_sequential_inefficient/fast:
 	cd /home/jorge/mrgcv/pacs/build-release && $(MAKE) $(MAKESILENT) -f lab3/CMakeFiles/pi_taylor_sequential_inefficient.dir/build.make lab3/CMakeFiles/pi_taylor_sequential_inefficient.dir/build
 .PHONY : pi_taylor_sequential_inefficient/fast
 
+# Convenience name for target.
+lab3/CMakeFiles/pi_xoni.dir/rule:
+	cd /home/jorge/mrgcv/pacs/build-release && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab3/CMakeFiles/pi_xoni.dir/rule
+.PHONY : lab3/CMakeFiles/pi_xoni.dir/rule
+
+# Convenience name for target.
+pi_xoni: lab3/CMakeFiles/pi_xoni.dir/rule
+.PHONY : pi_xoni
+
+# fast build rule for target.
+pi_xoni/fast:
+	cd /home/jorge/mrgcv/pacs/build-release && $(MAKE) $(MAKESILENT) -f lab3/CMakeFiles/pi_xoni.dir/build.make lab3/CMakeFiles/pi_xoni.dir/build
+.PHONY : pi_xoni/fast
+
 pi_taylor_parallel.o: pi_taylor_parallel.cc.o
 .PHONY : pi_taylor_parallel.o
 
@@ -268,6 +282,30 @@ pi_taylor_sequential_inefficient.cc.s:
 	cd /home/jorge/mrgcv/pacs/build-release && $(MAKE) $(MAKESILENT) -f lab3/CMakeFiles/pi_taylor_sequential_inefficient.dir/build.make lab3/CMakeFiles/pi_taylor_sequential_inefficient.dir/pi_taylor_sequential_inefficient.cc.s
 .PHONY : pi_taylor_sequential_inefficient.cc.s
 
+pi_xoni.o: pi_xoni.cc.o
+.PHONY : pi_xoni.o
+
+# target to build an object file
+pi_xoni.cc.o:
+	cd /home/jorge/mrgcv/pacs/build-release && $(MAKE) $(MAKESILENT) -f lab3/CMakeFiles/pi_xoni.dir/build.make lab3/CMakeFiles/pi_xoni.dir/pi_xoni.cc.o
+.PHONY : pi_xoni.cc.o
+
+pi_xoni.i: pi_xoni.cc.i
+.PHONY : pi_xoni.i
+
+# target to preprocess a source file
+pi_xoni.cc.i:
+	cd /home/jorge/mrgcv/pacs/build-release && $(MAKE) $(MAKESILENT) -f lab3/CMakeFiles/pi_xoni.dir/build.make lab3/CMakeFiles/pi_xoni.dir/pi_xoni.cc.i
+.PHONY : pi_xoni.cc.i
+
+pi_xoni.s: pi_xoni.cc.s
+.PHONY : pi_xoni.s
+
+# target to generate assembly for a file
+pi_xoni.cc.s:
+	cd /home/jorge/mrgcv/pacs/build-release && $(MAKE) $(MAKESILENT) -f lab3/CMakeFiles/pi_xoni.dir/build.make lab3/CMakeFiles/pi_xoni.dir/pi_xoni.cc.s
+.PHONY : pi_xoni.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -280,6 +318,7 @@ help:
 	@echo "... pi_taylor_parallel_automatic"
 	@echo "... pi_taylor_sequential"
 	@echo "... pi_taylor_sequential_inefficient"
+	@echo "... pi_xoni"
 	@echo "... pi_taylor_parallel.o"
 	@echo "... pi_taylor_parallel.i"
 	@echo "... pi_taylor_parallel.s"
@@ -292,6 +331,9 @@ help:
 	@echo "... pi_taylor_sequential_inefficient.o"
 	@echo "... pi_taylor_sequential_inefficient.i"
 	@echo "... pi_taylor_sequential_inefficient.s"
+	@echo "... pi_xoni.o"
+	@echo "... pi_xoni.i"
+	@echo "... pi_xoni.s"
 .PHONY : help
 
 

@@ -3,4 +3,5 @@ ADD_PACS_EXECUTABLE(TARGET pi_taylor_parallel_automatic SOURCES pi_taylor_parall
 ADD_PACS_EXECUTABLE(TARGET pi_taylor_parallel SOURCES pi_taylor_parallel.cc)
 ADD_PACS_EXECUTABLE(TARGET pi_taylor_sequential SOURCES pi_taylor_sequential.cc)
 ADD_PACS_EXECUTABLE(TARGET pi_taylor_sequential_inefficient SOURCES pi_taylor_sequential_inefficient.cc)
+ADD_PACS_EXECUTABLE(TARGET pi_xoni SOURCES pi_xoni.cc)
 

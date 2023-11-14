@@ -65,16 +65,19 @@ CMAKE_BINARY_DIR = /home/jorge/mrgcv/pacs/build-release
 # The main recursive "all" target.
 all: code_examples/all
 all: lab3/all
+all: lab4/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: code_examples/preinstall
 preinstall: lab3/preinstall
+preinstall: lab4/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: code_examples/clean
 clean: lab3/clean
+clean: lab4/clean
 .PHONY : clean
 
 #=============================================================================
@@ -124,6 +127,7 @@ lab3/all: lab3/CMakeFiles/pi_taylor_parallel_automatic.dir/all
 lab3/all: lab3/CMakeFiles/pi_taylor_parallel.dir/all
 lab3/all: lab3/CMakeFiles/pi_taylor_sequential.dir/all
 lab3/all: lab3/CMakeFiles/pi_taylor_sequential_inefficient.dir/all
+lab3/all: lab3/CMakeFiles/pi_xoni.dir/all
 .PHONY : lab3/all
 
 # Recursive "preinstall" directory target.
@@ -135,7 +139,23 @@ lab3/clean: lab3/CMakeFiles/pi_taylor_parallel_automatic.dir/clean
 lab3/clean: lab3/CMakeFiles/pi_taylor_parallel.dir/clean
 lab3/clean: lab3/CMakeFiles/pi_taylor_sequential.dir/clean
 lab3/clean: lab3/CMakeFiles/pi_taylor_sequential_inefficient.dir/clean
+lab3/clean: lab3/CMakeFiles/pi_xoni.dir/clean
 .PHONY : lab3/clean
+
+#=============================================================================
+# Directory level rules for directory lab4
+
+# Recursive "all" directory target.
+lab4/all: lab4/CMakeFiles/smallpt_thread_pool.dir/all
+.PHONY : lab4/all
+
+# Recursive "preinstall" directory target.
+lab4/preinstall:
+.PHONY : lab4/preinstall
+
+# Recursive "clean" directory target.
+lab4/clean: lab4/CMakeFiles/smallpt_thread_pool.dir/clean
+.PHONY : lab4/clean
 
 #=============================================================================
 # Target rules for target code_examples/CMakeFiles/hello_pacs.dir
@@ -170,7 +190,7 @@ code_examples/CMakeFiles/hello_pacs.dir/clean:
 code_examples/CMakeFiles/thread_joinable.dir/all:
 	$(MAKE) $(MAKESILENT) -f code_examples/CMakeFiles/thread_joinable.dir/build.make code_examples/CMakeFiles/thread_joinable.dir/depend
 	$(MAKE) $(MAKESILENT) -f code_examples/CMakeFiles/thread_joinable.dir/build.make code_examples/CMakeFiles/thread_joinable.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jorge/mrgcv/pacs/build-release/CMakeFiles --progress-num=33,34 "Built target thread_joinable"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jorge/mrgcv/pacs/build-release/CMakeFiles --progress-num=37,38 "Built target thread_joinable"
 .PHONY : code_examples/CMakeFiles/thread_joinable.dir/all
 
 # Build rule for subdir invocation for target.
@@ -274,7 +294,7 @@ code_examples/CMakeFiles/lambda_example.dir/clean:
 code_examples/CMakeFiles/saxpy.dir/all:
 	$(MAKE) $(MAKESILENT) -f code_examples/CMakeFiles/saxpy.dir/build.make code_examples/CMakeFiles/saxpy.dir/depend
 	$(MAKE) $(MAKESILENT) -f code_examples/CMakeFiles/saxpy.dir/build.make code_examples/CMakeFiles/saxpy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jorge/mrgcv/pacs/build-release/CMakeFiles --progress-num=25,26 "Built target saxpy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jorge/mrgcv/pacs/build-release/CMakeFiles --progress-num=27,28 "Built target saxpy"
 .PHONY : code_examples/CMakeFiles/saxpy.dir/all
 
 # Build rule for subdir invocation for target.
@@ -300,7 +320,7 @@ code_examples/CMakeFiles/saxpy.dir/clean:
 code_examples/CMakeFiles/saxpy_scaling.dir/all:
 	$(MAKE) $(MAKESILENT) -f code_examples/CMakeFiles/saxpy_scaling.dir/build.make code_examples/CMakeFiles/saxpy_scaling.dir/depend
 	$(MAKE) $(MAKESILENT) -f code_examples/CMakeFiles/saxpy_scaling.dir/build.make code_examples/CMakeFiles/saxpy_scaling.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jorge/mrgcv/pacs/build-release/CMakeFiles --progress-num=29,30 "Built target saxpy_scaling"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jorge/mrgcv/pacs/build-release/CMakeFiles --progress-num=31,32 "Built target saxpy_scaling"
 .PHONY : code_examples/CMakeFiles/saxpy_scaling.dir/all
 
 # Build rule for subdir invocation for target.
@@ -326,7 +346,7 @@ code_examples/CMakeFiles/saxpy_scaling.dir/clean:
 code_examples/CMakeFiles/synchronization.dir/all:
 	$(MAKE) $(MAKESILENT) -f code_examples/CMakeFiles/synchronization.dir/build.make code_examples/CMakeFiles/synchronization.dir/depend
 	$(MAKE) $(MAKESILENT) -f code_examples/CMakeFiles/synchronization.dir/build.make code_examples/CMakeFiles/synchronization.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jorge/mrgcv/pacs/build-release/CMakeFiles --progress-num=31,32 "Built target synchronization"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jorge/mrgcv/pacs/build-release/CMakeFiles --progress-num=35,36 "Built target synchronization"
 .PHONY : code_examples/CMakeFiles/synchronization.dir/all
 
 # Build rule for subdir invocation for target.
@@ -404,7 +424,7 @@ code_examples/CMakeFiles/parallel_sum_future.dir/clean:
 code_examples/CMakeFiles/saxpy_future.dir/all:
 	$(MAKE) $(MAKESILENT) -f code_examples/CMakeFiles/saxpy_future.dir/build.make code_examples/CMakeFiles/saxpy_future.dir/depend
 	$(MAKE) $(MAKESILENT) -f code_examples/CMakeFiles/saxpy_future.dir/build.make code_examples/CMakeFiles/saxpy_future.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jorge/mrgcv/pacs/build-release/CMakeFiles --progress-num=27,28 "Built target saxpy_future"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jorge/mrgcv/pacs/build-release/CMakeFiles --progress-num=29,30 "Built target saxpy_future"
 .PHONY : code_examples/CMakeFiles/saxpy_future.dir/all
 
 # Build rule for subdir invocation for target.
@@ -578,6 +598,58 @@ pi_taylor_sequential_inefficient: lab3/CMakeFiles/pi_taylor_sequential_inefficie
 lab3/CMakeFiles/pi_taylor_sequential_inefficient.dir/clean:
 	$(MAKE) $(MAKESILENT) -f lab3/CMakeFiles/pi_taylor_sequential_inefficient.dir/build.make lab3/CMakeFiles/pi_taylor_sequential_inefficient.dir/clean
 .PHONY : lab3/CMakeFiles/pi_taylor_sequential_inefficient.dir/clean
+
+#=============================================================================
+# Target rules for target lab3/CMakeFiles/pi_xoni.dir
+
+# All Build rule for target.
+lab3/CMakeFiles/pi_xoni.dir/all:
+	$(MAKE) $(MAKESILENT) -f lab3/CMakeFiles/pi_xoni.dir/build.make lab3/CMakeFiles/pi_xoni.dir/depend
+	$(MAKE) $(MAKESILENT) -f lab3/CMakeFiles/pi_xoni.dir/build.make lab3/CMakeFiles/pi_xoni.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jorge/mrgcv/pacs/build-release/CMakeFiles --progress-num=25,26 "Built target pi_xoni"
+.PHONY : lab3/CMakeFiles/pi_xoni.dir/all
+
+# Build rule for subdir invocation for target.
+lab3/CMakeFiles/pi_xoni.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jorge/mrgcv/pacs/build-release/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab3/CMakeFiles/pi_xoni.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jorge/mrgcv/pacs/build-release/CMakeFiles 0
+.PHONY : lab3/CMakeFiles/pi_xoni.dir/rule
+
+# Convenience name for target.
+pi_xoni: lab3/CMakeFiles/pi_xoni.dir/rule
+.PHONY : pi_xoni
+
+# clean rule for target.
+lab3/CMakeFiles/pi_xoni.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lab3/CMakeFiles/pi_xoni.dir/build.make lab3/CMakeFiles/pi_xoni.dir/clean
+.PHONY : lab3/CMakeFiles/pi_xoni.dir/clean
+
+#=============================================================================
+# Target rules for target lab4/CMakeFiles/smallpt_thread_pool.dir
+
+# All Build rule for target.
+lab4/CMakeFiles/smallpt_thread_pool.dir/all:
+	$(MAKE) $(MAKESILENT) -f lab4/CMakeFiles/smallpt_thread_pool.dir/build.make lab4/CMakeFiles/smallpt_thread_pool.dir/depend
+	$(MAKE) $(MAKESILENT) -f lab4/CMakeFiles/smallpt_thread_pool.dir/build.make lab4/CMakeFiles/smallpt_thread_pool.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jorge/mrgcv/pacs/build-release/CMakeFiles --progress-num=33,34 "Built target smallpt_thread_pool"
+.PHONY : lab4/CMakeFiles/smallpt_thread_pool.dir/all
+
+# Build rule for subdir invocation for target.
+lab4/CMakeFiles/smallpt_thread_pool.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jorge/mrgcv/pacs/build-release/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab4/CMakeFiles/smallpt_thread_pool.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jorge/mrgcv/pacs/build-release/CMakeFiles 0
+.PHONY : lab4/CMakeFiles/smallpt_thread_pool.dir/rule
+
+# Convenience name for target.
+smallpt_thread_pool: lab4/CMakeFiles/smallpt_thread_pool.dir/rule
+.PHONY : smallpt_thread_pool
+
+# clean rule for target.
+lab4/CMakeFiles/smallpt_thread_pool.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lab4/CMakeFiles/smallpt_thread_pool.dir/build.make lab4/CMakeFiles/smallpt_thread_pool.dir/clean
+.PHONY : lab4/CMakeFiles/smallpt_thread_pool.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

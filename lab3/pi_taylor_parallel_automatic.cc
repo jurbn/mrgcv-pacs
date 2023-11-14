@@ -72,7 +72,8 @@ int main() {
         auto stop = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
         BenchmarkFile << n_threads << "," << duration.count() << "," << pi_value << std::endl;
-
+        // kill the threads
+        thread_pool.clear();
     }
 }
 

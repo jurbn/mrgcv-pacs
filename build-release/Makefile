@@ -337,6 +337,32 @@ pi_taylor_sequential_inefficient/fast:
 	$(MAKE) $(MAKESILENT) -f lab3/CMakeFiles/pi_taylor_sequential_inefficient.dir/build.make lab3/CMakeFiles/pi_taylor_sequential_inefficient.dir/build
 .PHONY : pi_taylor_sequential_inefficient/fast
 
+#=============================================================================
+# Target rules for targets named pi_xoni
+
+# Build rule for target.
+pi_xoni: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pi_xoni
+.PHONY : pi_xoni
+
+# fast build rule for target.
+pi_xoni/fast:
+	$(MAKE) $(MAKESILENT) -f lab3/CMakeFiles/pi_xoni.dir/build.make lab3/CMakeFiles/pi_xoni.dir/build
+.PHONY : pi_xoni/fast
+
+#=============================================================================
+# Target rules for targets named smallpt_thread_pool
+
+# Build rule for target.
+smallpt_thread_pool: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 smallpt_thread_pool
+.PHONY : smallpt_thread_pool
+
+# fast build rule for target.
+smallpt_thread_pool/fast:
+	$(MAKE) $(MAKESILENT) -f lab4/CMakeFiles/smallpt_thread_pool.dir/build.make lab4/CMakeFiles/smallpt_thread_pool.dir/build
+.PHONY : smallpt_thread_pool/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -357,9 +383,11 @@ help:
 	@echo "... pi_taylor_parallel_automatic"
 	@echo "... pi_taylor_sequential"
 	@echo "... pi_taylor_sequential_inefficient"
+	@echo "... pi_xoni"
 	@echo "... saxpy"
 	@echo "... saxpy_future"
 	@echo "... saxpy_scaling"
+	@echo "... smallpt_thread_pool"
 	@echo "... synchronization"
 	@echo "... thread_joinable"
 .PHONY : help

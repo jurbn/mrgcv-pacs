@@ -19,5 +19,9 @@
 /home/jorge/mrgcv/pacs/build-release/lab3/CMakeFiles/pi_taylor_parallel.dir
 /home/jorge/mrgcv/pacs/build-release/lab3/CMakeFiles/pi_taylor_sequential.dir
 /home/jorge/mrgcv/pacs/build-release/lab3/CMakeFiles/pi_taylor_sequential_inefficient.dir
+/home/jorge/mrgcv/pacs/build-release/lab3/CMakeFiles/pi_xoni.dir
 /home/jorge/mrgcv/pacs/build-release/lab3/CMakeFiles/edit_cache.dir
 /home/jorge/mrgcv/pacs/build-release/lab3/CMakeFiles/rebuild_cache.dir
+/home/jorge/mrgcv/pacs/build-release/lab4/CMakeFiles/smallpt_thread_pool.dir
+/home/jorge/mrgcv/pacs/build-release/lab4/CMakeFiles/edit_cache.dir
+/home/jorge/mrgcv/pacs/build-release/lab4/CMakeFiles/rebuild_cache.dir

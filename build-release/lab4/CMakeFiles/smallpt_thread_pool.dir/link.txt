@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/smallpt_thread_pool.dir/smallpt_thread_pool.cpp.o -o smallpt_thread_pool 

@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/pi_xoni.dir/pi_xoni.cc.o -o pi_xoni 

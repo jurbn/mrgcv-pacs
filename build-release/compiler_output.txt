@@ -1,0 +1,30 @@
+[  5%] Built target hello_pacs
+[ 10%] Built target thread_joinable
+[ 15%] Built target hello_pacs_two_threads
+[ 21%] Built target hello_pacs_args
+[ 26%] Built target lambda_example
+[ 31%] Built target saxpy
+[ 36%] Built target saxpy_scaling
+[ 42%] Built target synchronization
+[ 47%] Built target mutex
+[ 52%] Built target parallel_sum_future
+[ 57%] Built target saxpy_future
+[ 63%] Built target packaged_task
+[ 68%] Built target atomic_synchronization
+[ 73%] Built target pi_taylor_parallel_automatic
+[ 78%] Built target pi_taylor_parallel
+[ 84%] Built target pi_taylor_sequential
+[ 89%] Built target pi_taylor_sequential_inefficient
+[ 94%] Built target pi_xoni
+Consolidate compiler generated dependencies of target smallpt_thread_pool
+[ 97%] Building CXX object lab4/CMakeFiles/smallpt_thread_pool.dir/smallpt_thread_pool.cpp.o
+/home/jorge/mrgcv/pacs/lab4/smallpt_thread_pool.cpp: In function ‘int main(int, char**)’:
+/home/jorge/mrgcv/pacs/lab4/smallpt_thread_pool.cpp:234:27: error: unused variable ‘samps’ [-Werror=unused-variable]
+  234 |     size_t w=1024, h=768, samps = 2; // # samples
+      |                           ^~~~~
+/home/jorge/mrgcv/pacs/lab4/smallpt_thread_pool.cpp:237:28: error: variable ‘cy’ set but not used [-Werror=unused-but-set-variable]
+  237 |     Vec cx=Vec(w*.5135/h), cy=(cx%cam.d).norm()*.5135;
+      |                            ^~
+/home/jorge/mrgcv/pacs/lab4/smallpt_thread_pool.cpp:246:11: error: unused variable ‘c_ptr’ [-Werror=unused-variable]
+  246 |     auto *c_ptr = c.get(); // raw pointer to Vector c
+      |           ^~~~~
