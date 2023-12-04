@@ -76,6 +76,8 @@
         "csignal": "cpp",
         "any": "cpp",
         "codecvt": "cpp",
-        "*.ipp": "cpp"
+        "*.ipp": "cpp",
+        "unistd.h": "c",
+        "stat.h": "c"
     }
 }
