@@ -78,6 +78,7 @@
         "codecvt": "cpp",
         "*.ipp": "cpp",
         "unistd.h": "c",
-        "stat.h": "c"
+        "stat.h": "c",
+        "alignedvector3": "c"
     }
 }
