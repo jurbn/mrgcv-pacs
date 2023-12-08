@@ -111,7 +111,7 @@ int main(int argc, char **argv)
     printf("Program built\n");
 
     // Create a compute kernel with the program we want to run
-    cl_kernel kernel = clCreateKernel(program, "flip", &err);
+    cl_kernel kernel = clCreateKernel(program, "histogram", &err);
     cl_error(err, "Failed to create kernel from the program\n");
     printf("Kernel created\n");
 
@@ -120,7 +120,7 @@ int main(int argc, char **argv)
     CImg<unsigned char> img("image.jpg");                        // Load image file "image.jpg" at object img
     // show the og image
     img.display("Image");
-    unsigned int imageWidth = img.width();                                // get image width
+    unsigned int numberOfPixels = img.width() * img.height();    // number of pixels of the image
     int arraySize = img.width() * img.height() * img.spectrum(); // number of elements of the array
     float *inputArrayHost = (float *)malloc(arraySize * sizeof(float));
     int *outputArrayHost = (int *)malloc(768 * sizeof(int));    // 768 = 256 * 3
@@ -149,7 +149,7 @@ int main(int argc, char **argv)
     cl_error(err, "Failed to set argument 0\n");
     err = clSetKernelArg(kernel, 1, sizeof(cl_mem), &out_device_object);
     cl_error(err, "Failed to set argument 1\n");
-    err = clSetKernelArg(kernel, 2, sizeof(int), &imageWidth);
+    err = clSetKernelArg(kernel, 2, sizeof(int), &numberOfPixels);
     cl_error(err, "Failed to set argument 2\n");
     printf("Arguments set\n");
 
@@ -160,20 +160,18 @@ int main(int argc, char **argv)
     printf("Kernel launched\n");
 
     // 10. Read data form device memory back to host memory
-    err = clEnqueueReadBuffer(command_queue, out_device_object, CL_TRUE, 0, sizeof(float) * arraySize, outputArrayHost, 0, NULL, NULL);
+    err = clEnqueueReadBuffer(command_queue, out_device_object, CL_TRUE, 0, sizeof(int) * 768, outputArrayHost, 0, NULL, NULL);
     cl_error(err, "Failed to enqueue a read command\n");
     printf("Data read from the device\n");
 
-    // print the histogram values
-    printf("Red histogram:\n");
+    // create histogram.csv file
+    FILE *histogramFile = fopen("histogram.csv", "w");
+    fprintf(histogramFile, "Red,Green,Blue\n");
     for (int i = 0; i < 256; i++)
-        printf("%d", outputArrayHost[i]);
-    printf("Green histogram:\n");
-    for (int i = 256; i < 512; i++)
-        printf("%d", outputArrayHost[i]);
-    printf("Blue histogram:\n");
-    for (int i = 512; i < 768; i++)
-        printf("%d", outputArrayHost[i]);
+    {
+        fprintf(histogramFile, "%d,%d,%d\n", outputArrayHost[i], outputArrayHost[i + 256], outputArrayHost[i + 512]);
+    }
+    fclose(histogramFile);
 
     // 12. Release all the OpenCL memory objects allocated along this program.
     clReleaseMemObject(in_device_object);
@@ -182,7 +180,7 @@ int main(int argc, char **argv)
     clReleaseKernel(kernel);
     clReleaseCommandQueue(command_queue);
     clReleaseContext(context);
-    printf("All OpenCL objects released\n");
+    printf("\nAll OpenCL objects released\n");
 
     return 0;
 }
